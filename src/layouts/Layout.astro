@@ -1,4 +1,6 @@
 ---
+import '@fontsource/open-sans/300.css';
+
 export interface Props {
   title: string;
 }
@@ -21,6 +23,11 @@ const { title } = Astro.props;
   <meta property="og:site_name" content="masawada.me">
 
   <link rel="shortcut icon" href="/images/favicon">
+  <!--
+    This site uses Open Sans font. It is distributed under the SIL Open Font License, 1.1
+    https://fontsource.org/fonts/open-sans
+    https://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL
+  -->
 </head>
 <body>
   <slot />
@@ -28,12 +35,17 @@ const { title } = Astro.props;
 </html>
 <style>
   :root {
+    --font-family: "Open Sans", "Helvetica", sans-serif;
+    --font-weight: 300;
+
     --color-bg: hsl(240, 18%, 95%);
     --color-text: hsl(0, 0%, 20%);
   }
 
   html {
     color: var(--color-text);
+    font-family: var(--font-family);
+    font-weight: var(--font-weight);
     background-color: var(--color-bg);
   }
 
