@@ -1,0 +1,32 @@
+---
+export interface Props {
+  icon: string;
+  label: string;
+  href: string!;
+}
+
+const { icon, label, href } = Astro.props;
+---
+
+<li>
+  <span class="icon">{icon}</span>
+  { href ? <a href={href}>{label}</a> : <>{label}</> }
+</li>
+<style>
+  li {
+    height: 20px;
+    padding: 5px 0;
+    font-size: 15px;
+    line-height: 20px;
+  }
+
+  li a {
+    color: inherit;
+    text-decoration: none;
+    outline: none;
+  }
+
+  .icon {
+    display: none;
+  }
+</style>

@@ -1,8 +1,27 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Me from '../components/Me.astro';
+import List from '../components/List.astro';
+import ListItem from '../components/ListItem.astro';
 ---
 
 <Layout title="masawada.me">
   <Me />
+  <List title="Profile">
+    <ListItem icon="none" label="Birthday: Nov 13, 1993" />
+    <ListItem icon="none" label="Location: Fujisawa, Kanagawa" />
+    <ListItem icon="none" label="Web Application Engineer at Hatena Co., Ltd." />
+  </List>
+  <List title="Accounts">
+    <ListItem icon="none" label="tetra1984@gmail.com" />
+    <ListItem icon="none" label="@masawada"      href="https://twitter.com/masawada" />
+    <ListItem icon="none" label="Masayoshi Wada" href="https://www.facebook.com/masayoshi.wada" />
+    <ListItem icon="none" label="masawada"       href="https://github.com/masawada" />
+    <ListItem icon="none" label="masawada"       href="https://speakerdeck.com/masawada" />
+    <ListItem icon="none" label="masawada"       href="https://www.flickr.com/photos/masawada" />
+  </List>
+  <List title="Web Sites">
+    <ListItem icon="none" label="Tech Blog" href="https://masawada.hatenablog.jp" />
+    <ListItem icon="none" label="Diary"     href="https://masawada.hatenadiary.com" />
+  </List>
 </Layout>
