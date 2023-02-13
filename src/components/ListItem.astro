@@ -3,16 +3,17 @@ export interface Props {
   icon: string;
   label: string;
   href: string!;
+  rel: string!;
 }
 
-const { icon, label, href } = Astro.props;
+const { icon, label, href, rel } = Astro.props;
 const iconPath = `/images/icons/${icon}.svg`;
 ---
 
 <li>
   <span class="icon"><img src={iconPath} width="15" height="15" alt={icon}></span>
-  <span class="label">{ href ? <a href={href}>{label}</a> : <>{label}</> }</span>
-</li>
+  <span class="label">{ href ? <a href={href} rel={rel}>{label}</a> : <>{label}</> }</span>
+  </li>
 <style>
   li {
     height: 20px;
